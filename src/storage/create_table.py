@@ -3,7 +3,7 @@ import sqlite3
 connection = sqlite3.connect('chess_data.db')
 cursor = connection.cursor()
 try:
-    connection.execute("DROP TABLE games")
+    connection.execute("DROP TABLE IF EXISTS games")
     connection.execute("CREATE TABLE games("
                        "id INTEGER PRIMARY KEY AUTOINCREMENT, "
                        "site_id INTEGER NOT NULL, "
