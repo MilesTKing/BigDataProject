@@ -1,4 +1,5 @@
 *.db
+*.db3
 *.sqlite3
 data/raw/lichess.pgn
 .venv/
