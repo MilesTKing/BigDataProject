@@ -5,7 +5,7 @@ cursor = connection.cursor()
 try:
     connection.execute("DROP TABLE games")
     connection.execute("CREATE TABLE games("
-                       "id INTEGER PRIMARY KEY, "
+                       "id INTEGER PRIMARY KEY AUTOINCREMENT, "
                        "site_id INTEGER NOT NULL, "
                        "date TEXT, "
                        "white_id INTEGER, "
@@ -15,7 +15,7 @@ try:
                        "result TEXT NOT NULL, "
                        "termination_condition TEXT NOT NULL, "
                        "time_control TEXT NOT NULL, "
-                       "opening_ECO TEXT, "
+                       "ECO TEXT, "
                        "moves BLOB NOT NULL)")
 except Exception as e:
     print(e)
